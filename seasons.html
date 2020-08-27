@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Seasons</title>
+</head>
+<body>
+	<header style="font-size: 33px">Choose any month</header>
+	<form>
+		<input type="radio" name="rest" value="Winter">January<br>
+        <input type="radio" name="rest" value="Winter">February<br>
+        <input type="radio" name="rest" value="Spring">March<br>
+        <input type="radio" name="rest" value="Spring">April<Br>
+        <input type="radio" name="rest" value="Spring">May<br>
+        <input type="radio" name="rest" value="Summer">June<br>
+        <input type="radio" name="rest" value="Summer">July<br>
+        <input type="radio" name="rest" value="Summer">August<br>
+        <input type="radio" name="rest" value="Autumn">September<br>
+        <input type="radio" name="rest" value="Autumn">October<br>
+        <input type="radio" name="rest" value="Autumn">November<br>
+        <input type="radio" name="rest" value="Winter">December<br>
+        <input type="button" id="btn" value="Show result for selected month">
+	</form>
+
+	<script>
+
+		const btn = document.querySelector('#btn');
+		// handle click button
+		btn.onclick = function () {
+			const rbs = document.querySelectorAll('input[name="rest"]');
+			let selectedValue;
+			for (const rb of rbs) {
+				if (rb.checked) {
+					selectedValue = rb.value;
+					break;
+				}
+			}
+			alert(selectedValue);
+		};
+		
+	</script>
+	
+</body>
+</html>
