@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Canvas element</title>
+</head>
+<body>
+
+	<canvas id="canvasTask" width="1300" height="640"
+	style="background-color: #eee;
+	border: 1px solid #ccc;"></canvas>
+
+	<script>
+
+	var canvas  = document.getElementById("canvasTask"),
+         context = canvas.getContext("2d");
+
+         context.lineWidth = 2;
+         context.moveTo(1, 1);
+         context.lineTo(22, 22);
+         context.lineTo(44, 1);
+         context.lineTo(66, 22);
+         context.lineTo(88, 1);
+         context.lineTo(110, 22);
+         context.lineTo(132, 1);
+         context.lineTo(154, 22);
+         context.lineTo(176, 1);
+         context.lineTo(198, 22);
+         context.lineTo(220, 1);
+         context.lineTo(242, 22);
+         context.lineTo(264, 1);
+         context.lineTo(286, 22);
+         context.lineTo(308, 1);
+         context.lineTo(330, 22);
+         context.lineTo(352, 1);
+         context.lineTo(374, 22);
+         context.lineTo(396, 1);
+         context.lineTo(418, 22);
+         context.lineTo(440, 1);
+         context.fillStyle = "rgba(0, 222, 0, 0.7)";
+         context.fill();
+         context.stroke();
+
+         context.beginPath();
+         context.moveTo(100, 100);
+         context.lineTo(400, 100);
+         context.lineTo(400, 300);
+         context.lineTo(100, 300);
+         context.closePath();
+         context.strokeStyle = "red";
+         context.fillStyle = "rgba(0, 0, 255, 0.2)";
+         context.fill();
+         context.stroke();
+
+         context.beginPath();
+         context.rect(50, 150, 450,200);
+         context.closePath();
+         context.fillStyle = "rgba(0, 255, 0, 0.5)";
+         context.fill();
+         context.stroke();
+
+	</script>
+	
+</body>
+</html>
